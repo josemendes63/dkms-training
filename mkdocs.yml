@@ -7,4 +7,8 @@ nav:
   - Home: index.md
   - Docker: docker.md
   - Linux: linux.md
-  - Exasol: exasol.md
+  - Exasol:
+      - Introdução: exasol.md
+      - BucketFS: bucketfs.md
+      - DBeaver: dbeaver.md
+  - GitHub: github.md
