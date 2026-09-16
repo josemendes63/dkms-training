@@ -1,14 +1,43 @@
 site_name: DKMS Training Portal
+site_description: Formação e documentação técnica
+site_author: José Mendes
 
 theme:
   name: material
+  language: pt
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - content.code.copy
 
 nav:
   - Home: index.md
-  - Docker: docker.md
-  - Linux: linux.md
+
+  - Docker:
+      - Visão Geral: docker/index.md
+      - Containers: docker/containers.md
+      - Images: docker/images.md
+      - Compose: docker/compose.md
+      - Registries: docker/registries.md
+
+  - Linux:
+      - Visão Geral: linux/index.md
+      - Comandos: linux/commands.md
+      - Shell Scripts: linux/scripts.md
+
   - Exasol:
-      - Introdução: exasol.md
-      - BucketFS: bucketfs.md
-      - DBeaver: dbeaver.md
-  - GitHub: github.md
+      - Visão Geral: exasol/index.md
+      - Administração: exasol/administration.md
+      - BucketFS: exasol/bucketfs.md
+      - Backup e Restore: exasol/backup.md
+      - DBeaver: exasol/dbeaver.md
+
+  - GitHub:
+      - Visão Geral: github/index.md
+      - Git Básico: github/git-basics.md
+      - GitHub Pages: github/github-pages.md
+      - MkDocs: github/mkdocs.md
