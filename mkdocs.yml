@@ -1,0 +1,10 @@
+site_name: DKMS Training Portal
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Docker: docker.md
+  - Linux: linux.md
+  - Exasol: exasol.md
