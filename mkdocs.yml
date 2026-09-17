@@ -51,7 +51,7 @@ nav:
       - Compose: docker/compose.md
       - Registries: docker/registries.md
 
-    - Kubernetes:
+  - Kubernetes:
       - Visão Geral: kubernetes/index.md
       - Arquitetura: kubernetes/architecture.md
       - Pods: kubernetes/pods.md
