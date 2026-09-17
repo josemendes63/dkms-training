@@ -1,6 +1,0 @@
-\# Exasol
-
-
-
-Documentação Exasol.
-

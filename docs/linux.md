@@ -1,6 +1,0 @@
-\# Linux
-
-
-
-Comandos Linux úteis.
-
