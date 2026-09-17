@@ -26,4 +26,3 @@ Plataforma de orquestração de containers.
 - Helm
 - Troubleshooting
 - Labs
-``
