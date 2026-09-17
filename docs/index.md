@@ -1,26 +1,33 @@
-# \# DKMS Training Portal
+﻿# Bem-vindo ao DKMS Training Portal
 
-# 
+Portal de documentação e formação técnica.
 
-# Bem-vindo ao portal de formação e documentação técnica.
+## 🐳 Docker
 
-# 
+Containers, Images, Compose e Registries.
 
-# \## Áreas de Conhecimento
+Utilize o menu superior **Docker**.
 
-# 
+---
 
-# \- Docker
+## 🐧 Linux
 
-# \- Linux
+Comandos úteis, Shell Scripts e Administração.
 
-# \- Exasol
+Utilize o menu superior **Linux**.
 
-# \- GitHub
+---
 
-# \- MkDocs
+## 🗄️ Exasol
 
-# 
+Administração, BucketFS, Backup e DBeaver.
 
-# Utilize o menu lateral para navegar pelos conteúdos.
+Utilize o menu superior **Exasol**.
 
+---
+
+## 🐙 GitHub
+
+Git, GitHub Pages e MkDocs.
+
+Utilize o menu superior **GitHub**.
