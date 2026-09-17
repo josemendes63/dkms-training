@@ -1,14 +1,20 @@
 # Kubernetes
 
-Documentação e formação Kubernetes.
+Plataforma de orquestração de containers.
 
-## Tópicos
+## Objetivos
 
+- Implementar aplicações
+- Escalar serviços
+- Gerir disponibilidade
+- Automatizar operações
+
+## Áreas
+
+- Arquitetura
 - Pods
-- Namespaces
 - Deployments
 - Services
-- Volumes
-- ConfigMaps
-- Secrets
 - Ingress
+- Storage
+- Segurança

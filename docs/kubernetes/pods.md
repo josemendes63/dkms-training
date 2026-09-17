@@ -1,8 +1,8 @@
 # Pods
 
-O Pod é a menor unidade executável no Kubernetes.
+Menor unidade executável no Kubernetes.
 
-## Ver Pods
+## Ver pods
 
 ```bash
 kubectl get pods

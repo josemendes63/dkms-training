@@ -1,0 +1,1 @@
+# Ingress Publicação HTTP e HTTPS. ## Listar ```bash kubectl get ingress

@@ -1,0 +1,1 @@
+# Services Exposição de aplicações. ## Listar ```bash kubectl get svc
