@@ -10,6 +10,14 @@ Utilize o menu superior **Docker**.
 
 ---
 
+## ☸️ Kubernetes
+
+Pods, Namespaces, Deployments, Services e Ingress.
+
+Utilize o menu superior **Kubernetes**.
+
+---
+
 ## 🐧 Linux
 
 Comandos úteis, Shell Scripts e Administração.
