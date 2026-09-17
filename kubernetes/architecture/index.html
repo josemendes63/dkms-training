@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../configmaps/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../helm/">
+        <link rel="next" href="../pods/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Secrets - DKMS Training Portal</title>
+        <title>Arquitetura - DKMS Training Portal</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#secrets" class="md-skip">
+        <a href="#arquitetura-kubernetes" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Secrets
+              Arquitetura
             
           </span>
         </div>
@@ -678,10 +678,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -697,6 +724,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-do-control-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes do Control Plane
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-worker-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes Worker Node
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -986,19 +1055,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../secrets/" class="md-nav__link">
         
   
   
@@ -1014,7 +1074,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1650,6 +1709,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-do-control-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes do Control Plane
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-worker-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Componentes Worker Node
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1665,8 +1754,20 @@
 
 
 
-<h1 id="secrets">Secrets</h1>
-<p>Armazenamento seguro de credenciais.</p>
+<h1 id="arquitetura-kubernetes">Arquitetura Kubernetes</h1>
+<h2 id="componentes-do-control-plane">Componentes do Control Plane</h2>
+<ul>
+<li>API Server</li>
+<li>Scheduler</li>
+<li>Controller Manager</li>
+<li>etcd</li>
+</ul>
+<h2 id="componentes-worker-node">Componentes Worker Node</h2>
+<ul>
+<li>kubelet</li>
+<li>kube-proxy</li>
+<li>Container Runtime</li>
+</ul>
 
 
 
