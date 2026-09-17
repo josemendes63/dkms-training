@@ -13,8 +13,17 @@ Plataforma de orquestração de containers.
 
 - Arquitetura
 - Pods
+- Namespaces
 - Deployments
+- ReplicaSets
+- StatefulSets
 - Services
 - Ingress
-- Storage
-- Segurança
+- Volumes
+- Persistent Volumes
+- ConfigMaps
+- Secrets
+- Helm
+- Troubleshooting
+- Labs
+``
