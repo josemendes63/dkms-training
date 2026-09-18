@@ -797,10 +797,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arquitetura" class="md-nav__link">
+  <a href="#estrutura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arquitetura
+        Estrutura
       
     </span>
   </a>
@@ -808,10 +808,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listar-namespaces" class="md-nav__link">
+  <a href="#listar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Listar Namespaces
+        Listar
       
     </span>
   </a>
@@ -819,10 +819,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#criar-namespace" class="md-nav__link">
+  <a href="#criar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Criar Namespace
+        Criar
       
     </span>
   </a>
@@ -830,10 +830,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#apagar-namespace" class="md-nav__link">
+  <a href="#apagar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Apagar Namespace
+        Apagar
       
     </span>
   </a>
@@ -841,10 +841,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#trabalhar-num-namespace" class="md-nav__link">
+  <a href="#ver-recursos-de-um-namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Trabalhar num Namespace
+        Ver recursos de um namespace
       
     </span>
   </a>
@@ -856,17 +856,6 @@
     <span class="md-ellipsis">
       
         Exemplo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
       
     </span>
   </a>
@@ -1799,10 +1788,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arquitetura" class="md-nav__link">
+  <a href="#estrutura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arquitetura
+        Estrutura
       
     </span>
   </a>
@@ -1810,10 +1799,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#listar-namespaces" class="md-nav__link">
+  <a href="#listar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Listar Namespaces
+        Listar
       
     </span>
   </a>
@@ -1821,10 +1810,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#criar-namespace" class="md-nav__link">
+  <a href="#criar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Criar Namespace
+        Criar
       
     </span>
   </a>
@@ -1832,10 +1821,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#apagar-namespace" class="md-nav__link">
+  <a href="#apagar" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Apagar Namespace
+        Apagar
       
     </span>
   </a>
@@ -1843,10 +1832,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#trabalhar-num-namespace" class="md-nav__link">
+  <a href="#ver-recursos-de-um-namespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Trabalhar num Namespace
+        Ver recursos de um namespace
       
     </span>
   </a>
@@ -1858,17 +1847,6 @@
     <span class="md-ellipsis">
       
         Exemplo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
       
     </span>
   </a>
@@ -1893,46 +1871,35 @@
 
 
 <h1 id="namespaces">Namespaces</h1>
-<p>Namespaces permitem separar recursos dentro de um cluster Kubernetes.</p>
-<p>São úteis para:</p>
-<ul>
-<li>Produção</li>
-<li>Desenvolvimento</li>
-<li>Testes</li>
-<li>Equipas distintas</li>
-</ul>
-<h2 id="arquitetura">Arquitetura</h2>
+<p>Namespaces permitem separar recursos dentro de um cluster.</p>
+<h2 id="estrutura">Estrutura</h2>
 <pre class="mermaid"><code>graph TD
 
-A[Kubernetes Cluster]
+C[Cluster Kubernetes]
 
-A --&gt; B[namespace-dev]
-A --&gt; C[namespace-test]
-A --&gt; D[namespace-prod]</code></pre>
-<h2 id="listar-namespaces">Listar Namespaces</h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>namespaces
-</code></pre></div>
-<p>ou</p>
+C --&gt; D[Development]
+
+C --&gt; T[Test]
+
+C --&gt; P[Production]</code></pre>
+<h2 id="listar">Listar</h2>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>ns
 </code></pre></div>
-<h2 id="criar-namespace">Criar Namespace</h2>
+<h2 id="criar">Criar</h2>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>dev
 </code></pre></div>
-<h2 id="apagar-namespace">Apagar Namespace</h2>
+<h2 id="apagar">Apagar</h2>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>namespace<span class="w"> </span>dev
 </code></pre></div>
-<h2 id="trabalhar-num-namespace">Trabalhar num Namespace</h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>dev
+<h2 id="ver-recursos-de-um-namespace">Ver recursos de um namespace</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>all<span class="w"> </span>-n<span class="w"> </span>dev
 </code></pre></div>
 <h2 id="exemplo">Exemplo</h2>
-<p>Criar um deployment em dev:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>nginx<span class="w"> </span><span class="se">\</span>
---image<span class="o">=</span>nginx<span class="w"> </span><span class="se">\</span>
--n<span class="w"> </span>dev
-</code></pre></div>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>Ver recursos existentes:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>all<span class="w"> </span>-n<span class="w"> </span>dev
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Namespace</span>
+
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
 </code></pre></div>
 
 

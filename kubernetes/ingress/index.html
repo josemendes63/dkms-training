@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ingress-publicacao-http-e-https-listar-bash-kubectl-get-ingress" class="md-skip">
+        <a href="#ingress" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -886,6 +886,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ingress
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -902,6 +920,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Ingress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1678,6 +1748,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arquitetura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-ingress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Ingress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1693,7 +1804,31 @@
 
 
 
-<h1 id="ingress-publicacao-http-e-https-listar-bash-kubectl-get-ingress">Ingress Publicação HTTP e HTTPS. ## Listar ```bash kubectl get ingress</h1>
+<h1 id="ingress">Ingress</h1>
+<p>Ingress permite publicar aplicações HTTP e HTTPS.</p>
+<h2 id="arquitetura">Arquitetura</h2>
+<pre class="mermaid"><code>graph TD
+
+Internet
+
+--&gt; Ingress
+
+Ingress --&gt; App1
+
+Ingress --&gt; App2
+
+Ingress --&gt; App3</code></pre>
+<h2 id="ver-ingress">Ver Ingress</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>ingress
+</code></pre></div>
+<h2 id="exemplo">Exemplo</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ingress</span>
+
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web-ingress</span>
+</code></pre></div>
 
 
 

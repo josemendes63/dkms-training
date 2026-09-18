@@ -1077,10 +1077,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#repositorios" class="md-nav__link">
+  <a href="#fluxo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Repositórios
+        Fluxo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver repositórios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adicionar-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adicionar repositório
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar NGINX
       
     </span>
   </a>
@@ -1733,10 +1766,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#repositorios" class="md-nav__link">
+  <a href="#fluxo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Repositórios
+        Fluxo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-repositorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver repositórios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adicionar-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adicionar repositório
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar NGINX
       
     </span>
   </a>
@@ -1761,10 +1827,30 @@
 
 
 <h1 id="helm">Helm</h1>
-<p>Package Manager do Kubernetes.</p>
-<h2 id="repositorios">Repositórios</h2>
-<p>```bash
-helm repo list</p>
+<p>Helm é o gestor de pacotes do Kubernetes.</p>
+<h2 id="fluxo">Fluxo</h2>
+<pre class="mermaid"><code>graph TD
+
+Chart
+
+--&gt; Helm
+
+Helm
+
+--&gt; Deployment
+
+Deployment
+
+--&gt; Pods</code></pre>
+<h2 id="ver-repositorios">Ver repositórios</h2>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>repo<span class="w"> </span>list
+</code></pre></div>
+<h2 id="adicionar-repositorio">Adicionar repositório</h2>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>bitnami<span class="w"> </span>https://charts.bitnami.com/bitnami
+</code></pre></div>
+<h2 id="instalar-nginx">Instalar NGINX</h2>
+<div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span>nginx<span class="w"> </span>bitnami/nginx
+</code></pre></div>
 
 
 

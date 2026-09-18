@@ -741,21 +741,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#componentes-do-control-plane" class="md-nav__link">
+  <a href="#visao-geral" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componentes do Control Plane
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componentes-worker-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componentes Worker Node
+        Visão Geral
       
     </span>
   </a>
@@ -1744,21 +1733,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#componentes-do-control-plane" class="md-nav__link">
+  <a href="#visao-geral" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Componentes do Control Plane
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#componentes-worker-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Componentes Worker Node
+        Visão Geral
       
     </span>
   </a>
@@ -1783,19 +1761,34 @@
 
 
 <h1 id="arquitetura-kubernetes">Arquitetura Kubernetes</h1>
-<h2 id="componentes-do-control-plane">Componentes do Control Plane</h2>
-<ul>
-<li>API Server</li>
-<li>Scheduler</li>
-<li>Controller Manager</li>
-<li>etcd</li>
-</ul>
-<h2 id="componentes-worker-node">Componentes Worker Node</h2>
-<ul>
-<li>kubelet</li>
-<li>kube-proxy</li>
-<li>Container Runtime</li>
-</ul>
+<h2 id="visao-geral">Visão Geral</h2>
+<pre class="mermaid"><code>graph TD
+
+CP[Control Plane]
+
+CP --&gt; API[API Server]
+
+CP --&gt; SCH[Scheduler]
+
+CP --&gt; CM[Controller Manager]
+
+CP --&gt; ETCD[etcd]
+
+W1[Worker Node 1]
+
+W1 --&gt; K1[kubelet]
+
+W1 --&gt; P1[Pods]
+
+W2[Worker Node 2]
+
+W2 --&gt; K2[kubelet]
+
+W2 --&gt; P2[Pods]
+
+API --&gt; W1
+
+API --&gt; W2</code></pre>
 
 
 

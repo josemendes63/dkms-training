@@ -780,6 +780,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#criar-um-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criar um Pod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listar-pods" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -813,10 +824,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entrar-no-container" class="md-nav__link">
+  <a href="#entrar-no-pod" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entrar no container
+        Entrar no Pod
       
     </span>
   </a>
@@ -824,21 +835,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
+  <a href="#ciclo-de-vida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemplo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
+        Ciclo de Vida
       
     </span>
   </a>
@@ -1810,6 +1810,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#criar-um-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criar um Pod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#listar-pods" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1843,10 +1854,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#entrar-no-container" class="md-nav__link">
+  <a href="#entrar-no-pod" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Entrar no container
+        Entrar no Pod
       
     </span>
   </a>
@@ -1854,21 +1865,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo" class="md-nav__link">
+  <a href="#ciclo-de-vida" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exemplo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
+        Ciclo de Vida
       
     </span>
   </a>
@@ -1894,40 +1894,39 @@
 
 <h1 id="pods">Pods</h1>
 <p>Os Pods são a unidade mais pequena executável no Kubernetes.</p>
-<p>Um Pod pode conter um ou mais containers que partilham rede e armazenamento.</p>
+<p>Um Pod pode conter um ou mais containers.</p>
 <h2 id="arquitetura">Arquitetura</h2>
 <pre class="mermaid"><code>graph TD
 
-A[Node] --&gt; B[Pod]
+N[Worker Node]
 
-B --&gt; C[Container 1]
-B --&gt; D[Container 2]</code></pre>
+N --&gt; P[Pod]
+
+P --&gt; C1[Container App]
+
+P --&gt; C2[Container Sidecar]</code></pre>
+<h2 id="criar-um-pod">Criar um Pod</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>nginx<span class="w"> </span>--image<span class="o">=</span>nginx
+</code></pre></div>
 <h2 id="listar-pods">Listar Pods</h2>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods
 </code></pre></div>
 <h2 id="ver-detalhes">Ver detalhes</h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>POD_NAME
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>nginx
 </code></pre></div>
 <h2 id="ver-logs">Ver logs</h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>logs<span class="w"> </span>POD_NAME
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>logs<span class="w"> </span>nginx
 </code></pre></div>
-<h2 id="entrar-no-container">Entrar no container</h2>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>POD_NAME<span class="w"> </span>--<span class="w"> </span>bash
+<h2 id="entrar-no-pod">Entrar no Pod</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>nginx<span class="w"> </span>--<span class="w"> </span>bash
 </code></pre></div>
-<h2 id="exemplo">Exemplo</h2>
-<p>Criar um Pod nginx:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>nginx<span class="w"> </span>--image<span class="o">=</span>nginx
-</code></pre></div>
-<p>Verificar:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods
-</code></pre></div>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>Ver eventos:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>POD_NAME
-</code></pre></div>
-<p>Ver logs:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>logs<span class="w"> </span>POD_NAME
-</code></pre></div>
+<h2 id="ciclo-de-vida">Ciclo de Vida</h2>
+<pre class="mermaid"><code>stateDiagram-v2
+
+Pending --&gt; Running
+Running --&gt; Succeeded
+Running --&gt; Failed
+Running --&gt; Unknown</code></pre>
 
 
 
