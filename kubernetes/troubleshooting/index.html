@@ -13,7 +13,7 @@
       
       
       
-        <link rel="prev" href="../helm/">
+        <link rel="prev" href="../kubectl-cheatsheet/">
       
       
         <link rel="next" href="../labs/">
@@ -76,6 +76,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Ir para o conteúdo
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -900,6 +905,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../network-policies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Policies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../volumes/" class="md-nav__link">
         
   
@@ -936,6 +969,34 @@
     
   
     Persistent Volumes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage-classes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage Classes
   
 
     
@@ -1012,6 +1073,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RBAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../helm/" class="md-nav__link">
         
   
@@ -1020,6 +1165,34 @@
     
   
     Helm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kubectl-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubectl Cheatsheet
   
 
     
@@ -1046,6 +1219,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1063,6 +1256,102 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ver-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Nodes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-pods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Pods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Eventos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-utilizacao-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver utilização de recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-objetos-com-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver objetos com problema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrar-num-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrar num Pod
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1084,34 +1373,6 @@
     
   
     Labs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mermaid-test/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Teste-Mermaid
   
 
     
@@ -1668,6 +1929,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ver-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Nodes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-pods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Pods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Eventos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver Logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-utilizacao-de-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver utilização de recursos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-objetos-com-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver objetos com problema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrar-num-pod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrar num Pod
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1684,9 +2032,30 @@
 
 
 
-  <h1>Troubleshooting</h1>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="ver-nodes">Ver Nodes</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
+</code></pre></div>
+<h2 id="ver-pods">Ver Pods</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-A
+</code></pre></div>
+<h2 id="ver-eventos">Ver Eventos</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>events
+</code></pre></div>
+<h2 id="ver-logs">Ver Logs</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>logs<span class="w"> </span>POD_NAME
+</code></pre></div>
+<h2 id="ver-utilizacao-de-recursos">Ver utilização de recursos</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>top<span class="w"> </span>nodes
 
-
+kubectl<span class="w"> </span>top<span class="w"> </span>pods
+</code></pre></div>
+<h2 id="ver-objetos-com-problema">Ver objetos com problema</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>all<span class="w"> </span>-A
+</code></pre></div>
+<h2 id="entrar-num-pod">Entrar num Pod</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>POD_NAME<span class="w"> </span>--<span class="w"> </span>bash
+</code></pre></div>
 
 
 
