@@ -70,14 +70,19 @@ nav:
       - StatefulSets: kubernetes/statefulsets.md
       - Services: kubernetes/services.md
       - Ingress: kubernetes/ingress.md
+      - Network Policies: kubernetes/network-policies.md
       - Volumes: kubernetes/volumes.md
       - Persistent Volumes: kubernetes/persistent-volumes.md
+      - Storage Classes: kubernetes/storage-classes.md
       - ConfigMaps: kubernetes/configmaps.md
       - Secrets: kubernetes/secrets.md
+      - RBAC: kubernetes/rbac.md
+      - Certificates: kubernetes/certificates.md
+      - Monitoring: kubernetes/monitoring.md
       - Helm: kubernetes/helm.md
+      - Kubectl Cheatsheet: kubernetes/kubectl-cheatsheet.md
       - Troubleshooting: kubernetes/troubleshooting.md
       - Labs: kubernetes/labs.md
-      - Teste-Mermaid: kubernetes/mermaid-test.md
     
   - Linux:
       - Visão Geral: linux/index.md
