@@ -2,17 +2,26 @@
 
 Os Pods são a unidade mais pequena executável no Kubernetes.
 
-Um Pod pode conter um ou mais containers que partilham rede e armazenamento.
+Um Pod pode conter um ou mais containers.
 
 ## Arquitetura
 
 ```mermaid
 graph TD
 
-A[Node] --> B[Pod]
+N[Worker Node]
 
-B --> C[Container 1]
-B --> D[Container 2]
+N --> P[Pod]
+
+P --> C1[Container App]
+
+P --> C2[Container Sidecar]
+```
+
+## Criar um Pod
+
+```bash
+kubectl run nginx --image=nginx
 ```
 
 ## Listar Pods
@@ -24,45 +33,28 @@ kubectl get pods
 ## Ver detalhes
 
 ```bash
-kubectl describe pod POD_NAME
+kubectl describe pod nginx
 ```
 
 ## Ver logs
 
 ```bash
-kubectl logs POD_NAME
+kubectl logs nginx
 ```
 
-## Entrar no container
+## Entrar no Pod
 
 ```bash
-kubectl exec -it POD_NAME -- bash
+kubectl exec -it nginx -- bash
 ```
 
-## Exemplo
+## Ciclo de Vida
 
-Criar um Pod nginx:
+```mermaid
+stateDiagram-v2
 
-```bash
-kubectl run nginx --image=nginx
-```
-
-Verificar:
-
-```bash
-kubectl get pods
-```
-
-## Troubleshooting
-
-Ver eventos:
-
-```bash
-kubectl describe pod POD_NAME
-```
-
-Ver logs:
-
-```bash
-kubectl logs POD_NAME
+Pending --> Running
+Running --> Succeeded
+Running --> Failed
+Running --> Unknown
 ```

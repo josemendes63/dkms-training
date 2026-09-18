@@ -1,70 +1,51 @@
 # Namespaces
 
-Namespaces permitem separar recursos dentro de um cluster Kubernetes.
+Namespaces permitem separar recursos dentro de um cluster.
 
-São úteis para:
-
-- Produção
-- Desenvolvimento
-- Testes
-- Equipas distintas
-
-## Arquitetura
+## Estrutura
 
 ```mermaid
 graph TD
 
-A[Kubernetes Cluster]
+C[Cluster Kubernetes]
 
-A --> B[namespace-dev]
-A --> C[namespace-test]
-A --> D[namespace-prod]
+C --> D[Development]
+
+C --> T[Test]
+
+C --> P[Production]
 ```
 
-## Listar Namespaces
-
-```bash
-kubectl get namespaces
-```
-
-ou
+## Listar
 
 ```bash
 kubectl get ns
 ```
 
-## Criar Namespace
+## Criar
 
 ```bash
 kubectl create namespace dev
 ```
 
-## Apagar Namespace
+## Apagar
 
 ```bash
 kubectl delete namespace dev
 ```
 
-## Trabalhar num Namespace
+## Ver recursos de um namespace
 
 ```bash
-kubectl get pods -n dev
+kubectl get all -n dev
 ```
 
 ## Exemplo
 
-Criar um deployment em dev:
+```yaml
+apiVersion: v1
+kind: Namespace
 
-```bash
-kubectl create deployment nginx \
---image=nginx \
--n dev
-```
-
-## Troubleshooting
-
-Ver recursos existentes:
-
-```bash
-kubectl get all -n dev
+metadata:
+  name: dev
 ```
