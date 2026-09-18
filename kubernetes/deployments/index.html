@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deployments-gestao-declarativa-de-aplicacoes" class="md-skip">
+        <a href="#deployments" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -825,10 +825,98 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#listar" class="md-nav__link">
+  <a href="#arquitetura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Listar
+        Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listar-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listar Deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criar-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criar Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atualizar-imagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atualizar imagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver estado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
       
     </span>
   </a>
@@ -1139,6 +1227,34 @@
     
   
     Labs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mermaid-test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teste-Mermaid
   
 
     
@@ -1705,10 +1821,98 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#listar" class="md-nav__link">
+  <a href="#arquitetura" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Listar
+        Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listar-deployments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listar Deployments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criar-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criar Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escalar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atualizar-imagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atualizar imagem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollback
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-estado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ver estado
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
       
     </span>
   </a>
@@ -1732,10 +1936,58 @@
 
 
 
-<h1 id="deployments-gestao-declarativa-de-aplicacoes">Deployments Gestão declarativa de aplicações.</h1>
-<h2 id="listar">Listar</h2>
-<p>```bash </p>
-<p>kubectl get deployments</p>
+<h1 id="deployments">Deployments</h1>
+<p>Deployments gerem Pods de forma declarativa.</p>
+<p>Permitem:</p>
+<ul>
+<li>Escalar aplicações</li>
+<li>Atualizações controladas</li>
+<li>Rollback</li>
+<li>Auto-recuperação</li>
+</ul>
+<h2 id="arquitetura">Arquitetura</h2>
+<pre class="mermaid"><code>graph TD
+
+A[Deployment]
+--&gt; B[ReplicaSet]
+
+B --&gt; C[Pod 1]
+B --&gt; D[Pod 2]
+B --&gt; E[Pod 3]</code></pre>
+<h2 id="listar-deployments">Listar Deployments</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>deployments
+</code></pre></div>
+<h2 id="criar-deployment">Criar Deployment</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>nginx<span class="w"> </span><span class="se">\</span>
+--image<span class="o">=</span>nginx
+</code></pre></div>
+<h2 id="escalar">Escalar</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>scale<span class="w"> </span>deployment<span class="w"> </span>nginx<span class="w"> </span><span class="se">\</span>
+--replicas<span class="o">=</span><span class="m">3</span>
+</code></pre></div>
+<h2 id="atualizar-imagem">Atualizar imagem</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/nginx<span class="w"> </span><span class="se">\</span>
+<span class="nv">nginx</span><span class="o">=</span>nginx:latest
+</code></pre></div>
+<h2 id="historico">Histórico</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>rollout<span class="w"> </span><span class="nb">history</span><span class="w"> </span>deployment<span class="w"> </span>nginx
+</code></pre></div>
+<h2 id="rollback">Rollback</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>rollout<span class="w"> </span>undo<span class="w"> </span>deployment<span class="w"> </span>nginx
+</code></pre></div>
+<h2 id="ver-estado">Ver estado</h2>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment<span class="w"> </span>nginx
+</code></pre></div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Ver deployment:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>deployment<span class="w"> </span>nginx
+</code></pre></div>
+<p>Ver pods relacionados:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods
+</code></pre></div>
+<p>Ver eventos:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>events
+</code></pre></div>
 
 
 
@@ -1791,10 +2043,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "content.code.copy", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "toc.follow", "content.code.copy", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
     
   </body>
